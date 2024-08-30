@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>界面</title>
+  </head>
+  <body>	
+	<div id="edge" class="edge" style="margin-left:10px;margin-top:10px;" onclick="edgedk();"><img src="edge.jpg" id="edgetp" class="edgetp"/></div>
+<div id="inedge" class="inedge" draggable="true">
+<h6 id="sa" class="sa">Edge</h6>
+<h6 id="sb" class="sb" onclick="edgezxh();">-</h6>
+<h6 id="sc" class="sc" onclick="if(zdhsz == 0){edgezdh();}else{edgehf();}">□</h6>
+<h6 id="sd" class="sd" onclick="edgegb();">×</h6>
+<iframe src="https://kaifa.baidu.com/" id="edgein" class="edgein"></iframe>
+</div>
+<div id="gll" class="gll"><img src="sta.jpg" class="statp" id="statp" onclick="if(stasz == 0){staqd();}else{stagb();}"/><img src="edge.jpg" id="statpa" class="statpa" onclick="edgedk();"/><img src="ss.jpg" id="ssa" class="ssa" onclick="if(tzsz == 0){sus();}else{susa();}"/><p id="sj" class="sj">10:00</p></div>
+<div id="stacd" class="stacd"><p id="gy" class="gy" onclick="gydk();">关于</p><p id="edgegll" class="edgegll" onclick="edgedk();">Edge</p></div>
+<div id="stacda" class="stacda"><input type="text" placeholder="在这里输入链接网址..." id="tzinp" class="tzinp"/><button id="tz" class="tz" onclick="tza();">搜索</button></div>
+<div id="gydiv" class="gydiv" draggable="true">
+<h6 id="gymz" class="gymz">关于</h6>
+<h6 id="gygb" class="gygb" onclick="gygba();">×</h6>
+<div id="gydiva" class="gydiva">
+<p id="gynr" class="gynr">我不知道写啥</p>
+</div>
+</div>
+  </body>
+<style>
+body{
+background-image:url('bz.jpg');
+background-size:100%;
+width:100%;
+height:100%;
+margin:0;
+padding:0;
+}
+.edge{
+resize:both;
+width:60px;
+height:60px;
+}
+.edgetp{
+width:60px;
+height:60px;
+border-radius:15px;
+}
+.inedge{
+position:relative;
+background-color:white;
+width:50vw;
+height:70vh;
+top:-20vh;
+left:35vw;
+display:none;
+}
+.edgein{
+width:100%;
+height:93%;
+margin-top:3vh;
+border-width:0px;
+position:relative;
+top:-43vh;
+}
+.sd{
+position:relative;
+top:-32.5vh;
+left:96%;
+width:2vh;
+}
+.sc{
+position:relative;
+top:-21.2vh;
+left:90%;
+width:2vh;
+}
+.sb{
+position:relative;
+top:-10vh;
+left:85%;
+width:2vh;
+}
+.gll{
+position:absolute;
+width:30vw;
+height:50px;
+bottom:2vh;
+background-color:white;
+margin:0 auto;
+border-radius:15px;
+left:0;
+right:0;
+}
+.statp{
+width:35px;
+height:35px;
+margin-left:10px;
+margin-top:5px;
+}
+.statpa{
+width:35px;
+height:35px;
+margin-left:70px
+margin-top:5px;
+}
+.sj{
+float:right;
+margin-right:20px;
+}
+.stacd{
+position:absolute;
+background-color:white;
+width:45vw;
+height:70vh;
+border-radius:20px;
+left:20vw;
+top:13vh;
+display:none;
+}
+.stacda{
+position:absolute;
+background-color:white;
+width:45vw;
+height:50vh;
+border-radius:20px;
+left:33vw;
+top:30vh;
+display:none;
+}
+@keyframes tzdh{
+0%{
+top:30vh;
+opacity:1;
+}
+100%{
+top:45vh;
+opacity:0;
+}
+}
+@keyframes tzdha{
+0%{
+top:45vh;
+opacity:0;
+}
+100%{
+top:30vh;
+opacity:1;
+}
+}
+@keyframes stadh{
+0%{
+opacity:0;
+top:23vh;
+}
+100%{
+opacity:1;
+top:13vh;
+}
+}
+@keyframes stadha{
+0%{
+opacity:1;
+top:13vh;
+}
+100%{
+opacity:0;
+top:23vh;
+}
+}
+@keyframes glldh{
+0%{
+bottom:2vh;
+opacity:1;
+}
+100%{
+bottom:-5vh;
+opacity:0;
+}
+}
+@keyframes glldha{
+0%{
+bottom:-5vh;
+opacity:0;
+}
+100%{
+bottom:2vh;
+opacity:1;
+}
+}
+.ssa{
+width:35px;
+height:35px;
+margin-left:73px;
+margin-top:8px;
+}
+.tzinp{
+position:relative;
+width:200px;
+height:30px;
+background-color:white;
+border-radius:10px;
+border-color:gray;
+border-width:1px;
+left:7vw;
+top:20vh;
+}
+.tz{
+position:relative;
+width:50x;
+height:35px;
+background-color:white;
+border-radius:10px;
+border-width:1px;
+border-color:gray;
+margin-left:10px;
+left:8vw;
+top:20vh;
+}
+.gydiv{
+position:absolute;
+width:43vw;
+height:65vh;
+background-color:white;
+left:30vw;
+top:15vh;
+display:none;
+}
+.gygb{
+position:relative;
+top:-18.5vh;
+left:97%;
+}
+.gymz{
+position:relative;
+top:-7vh;
+}
+.gydiva{
+position:relative;
+background-color:#F0F0F0;
+width:100%;
+height:94.4%;
+top:-26vh;
+}
+.gynr{
+position:relative;
+margin-left:20px;
+top:10px;
+}
+</style>
+<script>
+zdhsz = 0;
+stasz = 0;
+tzsz = 0;
+tzwz = "";
+gysz = 0;
+sja = Date();
+sjsz = sja.substring(15,21);
+document.getElementById("sj").innerHTML=sjsz;
+setInterval(function (){
+sja = Date();
+sjsz = sja.substring(15,21);
+document.getElementById("sj").innerHTML=sjsz;
+},1000);
+function edgedk(){
+document.getElementById("edgein").src="https://kaifa.baidu.com/";
+inedge.style.display="block";
+stacd.style.animationName="stadha";
+stacd.style.animationDuration="0.2s";
+stasz = 0;
+setTimeout(function (){
+stacd.style.display="none";
+},200);
+if(zdhsz == 1){
+gll.style.animationName="glldh";
+gll.style.animationDuration="0.5s";
+setTimeout(function (){
+gll.style.display="none";
+},500);
+}
+}
+function edgegb(){
+inedge.style.display="none";
+gll.style.animationName="glldha";
+gll.style.animationDuration="0.5s";
+gll.style.display="block";
+}
+function edgezdh(){
+inedge.style.width="100vw";
+inedge.style.height="100vh";
+inedge.style.top="-27.4vh";
+inedge.style.left="0vw";
+zdhsz = 1;
+gll.style.animationName="glldh";
+gll.style.animationDuration="0.5s";
+setTimeout(function (){
+gll.style.display="none";
+},500);
+}
+function edgehf(){
+inedge.style.width="50vw";
+inedge.style.height="70vh";
+inedge.style.top="-20vh";
+inedge.style.left="35vw";
+zdhsz = 0;
+gll.style.display="block";
+gll.style.animationName="glldha";
+gll.style.animationDuration="0.5s";
+}
+function edgezxh(){
+inedge.style.display="none";
+if(zdhsz == 1){
+gll.style.display="block";
+gll.style.animationName="glldha";
+gll.style.animationDuration="0.5s";
+}
+}
+function staqd(){
+stacd.style.animationName="stadh";
+stacd.style.animationDuration="0.2s";
+stacd.style.display="block";
+stasz = 1;
+}
+function stagb(){
+stacd.style.animationName="stadha";
+stacd.style.animationDuration="0.2s";
+stasz = 0;
+setTimeout(function (){
+stacd.style.display="none";
+},200);
+}
+function sus(){
+stacda.style.display="block";
+stacda.style.animationName="tzdha";
+stacda.style.animationDuration="0.2s";
+tzsz = 1;
+}
+function susa(){
+stacda.style.animationName="tzdh";
+stacda.style.animationDuration="0.2s";
+setTimeout(function (){
+stacda.style.display="none";
+},200);
+tzsz = 0;
+}
+function tza(){
+tzwz = tzinp.value;
+edgedk();
+document.getElementById("edgein").src=tzwz;
+susa();
+}
+function gydk(){
+gydiv.style.display="block";
+gysz = 1;
+stacd.style.animationName="stadha";
+stacd.style.animationDuration="0.2s";
+stasz = 0;
+setTimeout(function (){
+stacd.style.display="none";
+},200);
+}
+function gygba(){
+gydiv.style.display="none";
+gysz = 0;
+}
+</script>
+  </html>
